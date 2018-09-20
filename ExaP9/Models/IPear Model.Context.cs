@@ -25,5 +25,16 @@ namespace ExaP9.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<Color> Color { get; set; }
+        public virtual DbSet<Gama> Gama { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Telefono> Telefono { get; set; }
+        public virtual DbSet<Total> Total { get; set; }
+        public virtual DbSet<Ubicacion> Ubicacion { get; set; }
     }
 }

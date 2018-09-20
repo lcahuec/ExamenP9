@@ -216,6 +216,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Color.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gama.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IPear Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -233,6 +254,18 @@
       <DependentUpon>IPear Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Telefono.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Total.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ubicacion.cs">
+      <DependentUpon>IPear Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
