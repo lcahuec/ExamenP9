@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExaP9", "ExaP9\ExaP9.csproj", "{0CF2213D-14C0-4CDC-9B80-683410EC1D33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF2213D-14C0-4CDC-9B80-683410EC1D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF2213D-14C0-4CDC-9B80-683410EC1D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF2213D-14C0-4CDC-9B80-683410EC1D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF2213D-14C0-4CDC-9B80-683410EC1D33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {837B2EB7-BA30-4616-879A-65418317A76C}
+	EndGlobalSection
+EndGlobal
