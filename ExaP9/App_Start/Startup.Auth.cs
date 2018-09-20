@@ -58,11 +58,11 @@ namespace ExaP9
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "196127376919-kcb4jb318vb89cpn2311pji3ihu035o2.apps.googleusercontent.com",
+                ClientSecret = "Zuhan1REm6HuRBLiU8k8Eh66"
+            });
         }
     }
 }
