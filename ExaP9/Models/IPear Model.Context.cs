@@ -18,6 +18,7 @@ namespace ExaP9.Models
         public ExaP9DBEntities()
             : base("name=ExaP9DBEntities")
         {
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

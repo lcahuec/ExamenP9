@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace ExaP9
@@ -13,6 +14,10 @@ namespace ExaP9
 
             // Rutas de API web
             config.MapHttpAttributeRoutes();
+
+            //creacion del Json
+            config.Formatters.JsonFormatter.SupportedMediaTypes
+                .Add(new MediaTypeHeaderValue("text/html"));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
