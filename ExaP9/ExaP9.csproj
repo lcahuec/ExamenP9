@@ -284,6 +284,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\logo.png" />
     <Content Include="Models\IPear Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>IPear Model.edmx</DependentUpon>
