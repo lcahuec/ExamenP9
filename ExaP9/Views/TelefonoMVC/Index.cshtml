@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ExaP9.Models.Telefono>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color1.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gama1.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubicacion1.Pais)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color1.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gama1.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ubicacion1.Pais)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Idtelefono }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Idtelefono }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Idtelefono })
+        </td>
+    </tr>
+}
+
+</table>

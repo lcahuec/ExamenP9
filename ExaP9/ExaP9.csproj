@@ -215,6 +215,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TelefonoApiController.cs" />
+    <Compile Include="Controllers\TelefonoMVCController.cs" />
     <Compile Include="Controllers\TotalApiController.cs" />
     <Compile Include="Controllers\UbicacionApiController.cs" />
     <Compile Include="Global.asax.cs">
@@ -350,6 +351,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TelefonoMVC\Create.cshtml" />
+    <Content Include="Views\TelefonoMVC\Delete.cshtml" />
+    <Content Include="Views\TelefonoMVC\Details.cshtml" />
+    <Content Include="Views\TelefonoMVC\Edit.cshtml" />
+    <Content Include="Views\TelefonoMVC\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,66 @@
+﻿@model ExaP9.Models.Telefono
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Telefono</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color1.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color1.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gama1.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gama1.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubicacion1.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubicacion1.Pais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Idtelefono }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
