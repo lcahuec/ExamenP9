@@ -7,7 +7,7 @@
     <h2>Dispositivos Registrados</h2>
 </center>
 <p>
-     <a class="btn btn-danger" href="http://localhost:60497"> << Regresar a Menu</a>
+     <a class="btn btn-danger" href="http://localhost:60497"> << </a>
 </p>
 <table class="table">
     <tr class="titulos">
@@ -54,7 +54,7 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.Idtelefono },new { @class = "btn btn-success" }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Idtelefono }, new { @class = "btn btn-warning" }) |
+         
             @Html.ActionLink("Eliminar", "Delete", new { id=item.Idtelefono }, new { @class = "btn btn-danger" })
         </td>
     </tr>

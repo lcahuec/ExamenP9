@@ -1,17 +1,38 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@model IEnumerable<ExaP9.Models.Telefono>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@{
+    ViewBag.Title = "";
+}
+<center>
+    <h2>Dispositivos Registrados</h2>
+</center>
+<p>
+    <a class="btn btn-danger" href="http://localhost:60497"> << </a>
+</p>
+<table class="table">
+    <tr class="titulos">
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gama1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubicacion1.Pais)
+        </th>
+        <th></th>
+    </tr>
+    </table>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>

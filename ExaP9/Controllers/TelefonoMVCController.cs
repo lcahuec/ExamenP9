@@ -99,6 +99,7 @@ namespace ExaP9.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Telefono telefono = db.Telefono.Find(id);
             if (telefono == null)
             {
@@ -119,6 +120,7 @@ namespace ExaP9.Controllers
         {
             if (ModelState.IsValid)
             {
+                telefono.Fecha = DateTime.Now;
                 db.Entry(telefono).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

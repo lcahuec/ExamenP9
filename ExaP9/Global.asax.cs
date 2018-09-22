@@ -14,7 +14,7 @@ namespace ExaP9
     {
         protected void Application_Start()
         {
-
+            //se agrego esta linea para que actulice las llaver foraneas y muestre los datos 
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.Re‌​ferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
             AreaRegistration.RegisterAllAreas();
