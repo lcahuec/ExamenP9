@@ -78,18 +78,38 @@ namespace ExaP9.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Idtelefono,Marca,Gama,Ubicacion,Color,Precio,Fecha")] Telefono telefono)
         {
+            //if (ModelState.IsValid)
+            //{
+            //    telefono.Fecha = DateTime.Now;
+            //    db.Telefono.Add(telefono);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
+
+            //ViewBag.Color = new SelectList(db.Color, "Idcolor", "Descripcion", telefono.Color);
+            //ViewBag.Gama = new SelectList(db.Gama, "Idgama", "Descripcion", telefono.Gama);
+            //ViewBag.Ubicacion = new SelectList(db.Ubicacion, "Idubicacion", "Pais", telefono.Ubicacion);
+            //return View(telefono);
+
             if (ModelState.IsValid)
             {
-                telefono.Fecha = DateTime.Now;
-                db.Telefono.Add(telefono);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("http://localhost:60497/api/");
+                    //HTTP Post
+                    var postTask = client.PostAsJsonAsync<Telefono>("telefonoapi", telefono);
+                    postTask.Wait();
 
-            ViewBag.Color = new SelectList(db.Color, "Idcolor", "Descripcion", telefono.Color);
-            ViewBag.Gama = new SelectList(db.Gama, "Idgama", "Descripcion", telefono.Gama);
-            ViewBag.Ubicacion = new SelectList(db.Ubicacion, "Idubicacion", "Pais", telefono.Ubicacion);
-            return View(telefono);
+                    var resul = postTask.Result;
+                    if (resul.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+                ModelState.AddModelError(string.Empty, "Error en la insercción,favor contacte al administrador");
+            }
+            return RedirectToAction("Index");
+
         }
 
         // GET: TelefonoMVC/Edit/5
