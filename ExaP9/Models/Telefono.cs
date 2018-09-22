@@ -11,7 +11,8 @@ namespace ExaP9.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Telefono
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,6 +27,10 @@ namespace ExaP9.Models
         public int Ubicacion { get; set; }
         public int Color { get; set; }
         public Nullable<int> Precio { get; set; }
+
+        //CAMPO FECHA
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy }", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> Fecha { get; set; }
     
         public virtual Color Color1 { get; set; }

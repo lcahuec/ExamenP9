@@ -18,29 +18,32 @@ namespace ExaP9.Controllers
         // GET: TelefonoMVC
         public ActionResult Index()
         {
-            IEnumerable<Telefono> telefono = null;
+            //var telefono = db.Telefono.Include(t => t.Color1).Include(t => t.Gama1).Include(t => t.Ubicacion1);
+            //return View(telefono.ToList());
+            IEnumerable<Telefono> telefonos = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:60497/api/");
-                //GET GETTelefono
+                client.BaseAddress = new Uri("http://localhost:51631/api/");
+                //GET GETAlumnos
                 //el siguente codigo obtiene la informacion de manera asincrona y espera hata obtener la data
                 var reponseTask = client.GetAsync("telefonoapi");
                 reponseTask.Wait();
                 var result = reponseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    // leer todo el cotenido y lo parseamos a una lista de telefonos
+                    // leer todo el cotenido y lo parseamos a una lista de alumno
                     var leer = result.Content.ReadAsAsync<IList<Telefono>>();
                     leer.Wait();
-                    telefono = leer.Result;
+                    telefonos = leer.Result;
                 }
                 else
                 {
-                    telefono = Enumerable.Empty<Telefono>();
+                    telefonos = Enumerable.Empty<Telefono>();
                     ModelState.AddModelError(string.Empty, "Error...");
                 }
+
             }
-              return View(telefono.ToList());
+            return View(telefonos.ToList());
         }
 
         // GET: TelefonoMVC/Details/5
