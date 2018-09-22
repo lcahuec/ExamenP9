@@ -3,17 +3,14 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Registros</h2>
-
+<center>
+    <h2>Dispositivos Registrados</h2>
+</center>
 <p>
-    @Html.ActionLink("Create New", "Create")
+     <a class="btn btn-danger" href="http://localhost:60497"> << Regresar a Menu</a>
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Idtelefono)
-        </th>
+    <tr class="titulos">
         <th>
             @Html.DisplayNameFor(model => model.Marca)
         </th>
@@ -27,19 +24,16 @@
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gama)
+            @Html.DisplayNameFor(model => model.Gama1)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ubicacion)
+            @Html.DisplayNameFor(model => model.Ubicacion1.Pais)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Idtelefono)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Marca)
         </td>
@@ -59,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.Ubicacion1.Pais)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Idtelefono }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Idtelefono }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Idtelefono })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Idtelefono },new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Idtelefono }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Idtelefono }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

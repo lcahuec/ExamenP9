@@ -173,6 +173,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_T_U">
+          <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="1" />
+          <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubicacion">
+              <PropertyRef Name="Idubicacion" />
+            </Principal>
+            <Dependent Role="Telefono">
+              <PropertyRef Name="Ubicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Telefono_Color">
           <End Role="Color" Type="Self.Color" Multiplicity="1" />
           <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
@@ -194,18 +206,6 @@
             </Principal>
             <Dependent Role="Telefono">
               <PropertyRef Name="Gama" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Telefono_Ubicacion">
-          <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="1" />
-          <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Ubicacion">
-              <PropertyRef Name="Idubicacion" />
-            </Principal>
-            <Dependent Role="Telefono">
-              <PropertyRef Name="Ubicacion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -250,16 +250,16 @@
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
           </AssociationSet>
+          <AssociationSet Name="FK_T_U" Association="Self.FK_T_U">
+            <End Role="Ubicacion" EntitySet="Ubicacion" />
+            <End Role="Telefono" EntitySet="Telefono" />
+          </AssociationSet>
           <AssociationSet Name="FK_Telefono_Color" Association="Self.FK_Telefono_Color">
             <End Role="Color" EntitySet="Color" />
             <End Role="Telefono" EntitySet="Telefono" />
           </AssociationSet>
           <AssociationSet Name="FK_Telefono_Gama" Association="Self.FK_Telefono_Gama">
             <End Role="Gama" EntitySet="Gama" />
-            <End Role="Telefono" EntitySet="Telefono" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Telefono_Ubicacion" Association="Self.FK_Telefono_Ubicacion">
-            <End Role="Ubicacion" EntitySet="Ubicacion" />
             <End Role="Telefono" EntitySet="Telefono" />
           </AssociationSet>
           <AssociationSet Name="FK_Total_Telefono" Association="Self.FK_Total_Telefono">

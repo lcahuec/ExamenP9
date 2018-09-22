@@ -20,10 +20,11 @@ namespace ExaP9.Controllers
         {
             //var telefono = db.Telefono.Include(t => t.Color1).Include(t => t.Gama1).Include(t => t.Ubicacion1);
             //return View(telefono.ToList());
+
             IEnumerable<Telefono> telefonos = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:51631/api/");
+                client.BaseAddress = new Uri("http://localhost:60497/api/");
                 //GET GETAlumnos
                 //el siguente codigo obtiene la informacion de manera asincrona y espera hata obtener la data
                 var reponseTask = client.GetAsync("telefonoapi");
@@ -79,6 +80,7 @@ namespace ExaP9.Controllers
         {
             if (ModelState.IsValid)
             {
+                telefono.Fecha = DateTime.Now;
                 db.Telefono.Add(telefono);
                 db.SaveChanges();
                 return RedirectToAction("Index");

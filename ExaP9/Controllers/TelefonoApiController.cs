@@ -19,7 +19,7 @@ namespace ExaP9.Controllers
         // GET: api/TelefonoApi
         public IQueryable<Telefono> GetTelefono()
         {
-            return db.Telefono;
+            return db.Telefono.Include(t => t.Color1).Include(t => t.Gama1).Include(t => t.Ubicacion1);
         }
 
         // GET: api/TelefonoApi/5
@@ -78,7 +78,7 @@ namespace ExaP9.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            telefono.Fecha = DateTime.Now;
             db.Telefono.Add(telefono);
             db.SaveChanges();
 

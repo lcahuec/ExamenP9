@@ -27,10 +27,8 @@ namespace ExaP9.Models
         public int Ubicacion { get; set; }
         public int Color { get; set; }
         public Nullable<int> Precio { get; set; }
-
-        //CAMPO FECHA
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy }", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> Fecha { get; set; }
     
         public virtual Color Color1 { get; set; }

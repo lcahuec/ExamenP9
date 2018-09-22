@@ -10,8 +10,6 @@
     <h4>Telefono</h4>
     <hr />
     <dl class="dl-horizontal">
-      
-
         <dt>
             @Html.DisplayNameFor(model => model.Marca)
         </dt>
@@ -37,15 +35,15 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Color)
+            @Html.DisplayNameFor(model => model.Color1.Descripcion)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Color1)
+            @Html.DisplayFor(model => model.Color1.Descripcion)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Gama)
+            @Html.DisplayNameFor(model => model.Gama1.Descripcion)
         </dt>
 
         <dd>
@@ -64,5 +62,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Idtelefono }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index" )
 </p>
